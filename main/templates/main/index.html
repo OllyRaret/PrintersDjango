@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ЛУЧШИЕ 3Д ПРИНТЕРА У НАС</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/menu/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="static/menu/css/animate.css">
+    
+    <link rel="stylesheet" href="static/menu/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/menu/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="static/menu/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="static/menu/css/aos.css">
+
+    <link rel="stylesheet" href="static/menu/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="static/menu/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="static/menu/css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="static/menu/css/flaticon.css">
+    <link rel="stylesheet" href="static/menu/css/icomoon.css">
+    <link rel="stylesheet" href="static/menu/css/style.css">
+  </head>
+  <body>
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+			<a class="navbar-brand" href="/">Printer<small>shop</small></a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item"><a href="/" class="nav-link">домой</a></li>
+	          <li class="nav-item active"><a href="menu" class="nav-link">Наши принтеры</a></li>
+	          <li class="nav-item"><a href="about" class="nav-link">О нас</a></li>
+	          <li class="nav-item"><a href="contact" class="nav-link">Отправить сообщение</a></li>
+
+				{% if request.session.username %}
+				<li><span class="nav-link">Добро пожаловать, {{ request.session.username }}</span></li>
+				<li><a href="{% url 'logout' %}" class="nav-link">Выйти</a></li>
+				{% else %}
+				<li><a href="{% url 'login' %}" class="nav-link">Вход</a></li>
+				{% endif %}
+	        </ul>
+	      </div>
+		  </div>
+	  </nav>
+
+    <section class="home-slider owl-carousel">
+      <div class="slider-item" style="background-image: url(static/menu/images/bg_1.jpg);">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+            <div class="col-md-8 col-sm-12 text-center ftco-animate">
+            	<span class="subheading">Добро пожаловать</span>
+              <h1 class="mb-4">Самые лучшие 3D принтеры у нас</h1>
+              <p class="mb-4 mb-md-5">У нас самый большой асортиментв России</p>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-image: url(static/menu/images/bg_2.jpg);">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+            <div class="col-md-8 col-sm-12 text-center ftco-animate">
+            	<span class="subheading">Добро пожаловать</span>
+              <h1 class="mb-4">Самая быстрая доставка</h1>
+              <p class="mb-4 mb-md-5">Наша доставка самая быстрая в России</p>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-image: url(static/menu/images/bg_3.jpg);">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+            <div class="col-md-8 col-sm-12 text-center ftco-animate">
+            	<span class="subheading">Добро пожаловать</span>
+              <h1 class="mb-4">Самые низкие цены на рынке</h1>
+              <p class="mb-4 mb-md-5">Наши цены одни из самых приемлемых</p>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-intro">
+    	<div class="container-wrap">
+    		<div class="wrap d-md-flex align-items-xl-end">
+	    		<div class="info">
+	    			<div class="row no-gutters">
+	    				<div class="col-md-4 d-flex ftco-animate">
+	    					<div class="icon"><span class="icon-phone"></span></div>
+	    					<div class="text">
+	    						<h3>8 908 741 75 33</h3>
+	    						<p>Звоните нам по номеру сверху</p>
+	    					</div>
+	    				</div>
+	    				<div class="col-md-4 d-flex ftco-animate">
+	    					<div class="icon"><span class="icon-my_location"></span></div>
+	    					<div class="text">
+	    						<h3>Красная пл., 4</h3>
+	    						<p>Находимся в центре Москвы</p>
+	    					</div>
+	    				</div>
+	    				<div class="col-md-4 d-flex ftco-animate">
+	    					<div class="icon"><span class="icon-clock-o"></span></div>
+	    					<div class="text">
+	    						<h3>Открыты Пн-Пт</h3>
+	    						<p>С 08:00 до 20:00</p>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<div class="book p-4">
+	    			<h3>Напишите нам на почту</h3>
+	    			<form action="{% url 'send-message' %}" method="post" class="appointment-form">
+                    	{% csrf_token %}
+	    				<div class="d-md-flex">
+		    				<div class="form-group">
+		    					<input type="text" class="form-control" name="first_name" placeholder="Имя">
+		    				</div>
+		    				<div class="form-group ml-md-4">
+		    					<input type="text" class="form-control" name="last_name" placeholder="Фамилия">
+		    				</div>
+	    				</div>
+	    				<div class="d-md-flex">
+		    				<div class="form-group ml-md-4">
+		    					<input type="text" class="form-control" name="phone" placeholder="Телефон">
+		    				</div>
+	    				</div>
+	    				<div class="d-md-flex">
+	    					<div class="form-group">
+		              <textarea name="message" id="" cols="30" rows="2" class="form-control" placeholder="Cообщение"></textarea>
+		            </div>
+		            <div class="form-group ml-md-4">
+		              <input type="submit" value="Отправить" class="btn btn-white py-3 px-4">
+		            </div>
+	    				</div>
+	    			</form>
+	    		</div>
+    		</div>
+    	</div>
+    </section>
+
+    <section class="ftco-about d-md-flex">
+    	<div class="one-half img" style="background-image: url(static/menu/images/about.jpg);"></div>
+    	<div class="one-half ftco-animate">
+    		<div class="overlap">
+	        <div class="heading-section ftco-animate ">
+	        	<span class="subheading">Что такое</span>
+	          <h2 class="mb-4">3D принтеры</h2>
+	        </div>
+	        <div>
+	  				<p>3D принтеры - это удивительные устройства, которые позволяют создавать трехмерные объекты практически из любого материала. Они революционизировали мир производства и дизайна, позволяя создавать уникальные предметы прямо на месте. Благодаря 3D принтерам, теперь возможно изготавливать различные предметы, от игрушек и украшений до автомобилей и даже домов. Они стали незаменимым инструментом для многих отраслей промышленности, их возможности постоянно расширяются, и будущее 3D принтеров выглядит очень захватывающе.</p>
+	  			</div>
+  			</div>
+    	</div>
+    </section>
+
+    <section class="ftco-section ftco-services">
+    	<div class="container">
+    		<div class="row">
+          <div class="col-md-4 ftco-animate">
+            <div class="media d-block text-center block-6 services">
+              <div class="icon d-flex justify-content-center align-items-center mb-5">
+              	<span class="flaticon-choices"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Наш товары всегда актуальны</h3>
+                <p>Нас асортимент быстро обновляется</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="media d-block text-center block-6 services">
+              <div class="icon d-flex justify-content-center align-items-center mb-5">
+              	<span class="flaticon-delivery-truck"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Самая быстрая доставка</h3>
+                <p>Наша доставка распространяется по всей России</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="media d-block text-center block-6 services">
+              <div class="icon d-flex justify-content-center align-items-center mb-5">
+              	<span class=""><img src="./static/menu/images/3d_printer_jstsi3pu806i_64.png" alt="sdfsdf"></span></div>
+              <div class="media-body">
+                <h3 class="heading">Самые лучшие 3D принтеры</h3>
+                <p>Наши принтеры одни из самых лучших</p>
+              </div>
+            </div>    
+          </div>
+        </div>
+    	</div>
+    </section>
+
+	<section class="ftco-menu mb-5 pb-5">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Наши принтера</h2>
+          </div>
+        </div>
+    		<div class="row d-md-flex">
+	    		<div class="col-lg-12 ftco-animate p-md-5">
+		    		<div class="row">
+		          <div class="col-md-12 nav-link-wrap mb-5">
+		            <div class="nav ftco-animate nav-pills justify-content-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+		              <a class="nav-link active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Основной асортимент</a>
+		            </div>
+		          </div>
+		          <div class="col-md-12 d-flex align-items-center">
+		            
+		            <div class="tab-content ftco-animate" id="v-pills-tabContent">
+
+		              <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab">
+		              	<div class="row">
+		              		<div class="col-md-4 text-center">
+		              			<div class="menu-wrap">
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(static/menu/images/dish-1.jpg);"></a>
+		              				<div class="text">
+		              					<h3><a href="#">3D принтер Hercules G3</a></h3>
+		              					<p>3D принтер Hercules G3 – это устройство среднего сегмента по уровню производительности. Лучше всего подходит для реализации задач малого и среднего предпринимательства. Размещается на столе, не занимая на нем много места.</p>
+		              					<p class="price"><span>450 000 ₽</span></p>
+
+		              				</div>
+		              			</div>
+		              		</div>
+		              		<div class="col-md-4 text-center">
+		              			<div class="menu-wrap">
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(static/menu/images/dish-2.jpg);"></a>
+		              				<div class="text">
+		              					<h3><a href="#">3D принтер Zenit</a></h3>
+		              					<p>3D-принтер ZENIT - российский 3D-принтер нового поколения. Принтер печатает по технологии FDM, обладает высоким качеством печати при разрешение в 50 микрон.</p>
+		              					<p class="price"><span>150 000 ₽</span></p>
+
+		              				</div>
+		              			</div>
+		              		</div>
+		              		<div class="col-md-4 text-center">
+		              			<div class="menu-wrap">
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(static/menu/images/dish-3.jpg);"></a>
+		              				<div class="text">
+		              					<h3><a href="#">3D принтер Snapmaker J1s (J1 S) IDEX</a></h3>
+		              					<p>3D принтер Snapmaker J1S - идеальное решение для тех, кто ищет универсальный и надежный принтер. Благодаря независимому двойному экструдеру (IDEX), сверхбыстрой скорости печати и оптимизации сглаживания, J1 гарантирует, что вы каждый раз будете получать отпечатки наилучшего качества. Принтер оснащен литыми и обработанными деталями, линейными направляющими, а также интуитивно понятным программным обеспечением, ориентированным на пользователя и простым в использовании.</p>
+		              					<p class="price"><span>200 000 ₽</span></p>
+
+		              				</div>
+		              			</div>
+		              		</div>
+		              	</div>
+		              </div>
+					</div>
+				</div>
+		      </div>
+		    </div>
+    	</div>
+    </section>
+
+    <section class="ftco-section img" id="ftco-testimony" style="background-image: url(static/menu/images/bg_1.jpg);"  data-stellar-background-ratio="0.5">
+    	<div class="overlay"></div>
+	    <div class="container">
+	      <div class="row justify-content-center mb-5">
+	        <div class="col-md-7 heading-section text-center ftco-animate">
+	        	<span class="subheading">Наши отзывы</span>
+	          <h2 class="mb-4">3D ПРИНТЕР</h2>
+	          <p>3D-принтер — станок с числовым программным управлением, реализующий только аддитивные операции, то есть добавляющий порции материала к заготовке.</p>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="container-wrap">
+	      <div class="row d-flex no-gutters">
+	        <div class="col-lg align-self-sm-end ftco-animate">
+	          <div class="testimony">
+	             <blockquote>
+	                <p>&ldquo;Спасибо. Мне все понравилось&rdquo;</p>
+	              </blockquote>
+	              <div class="author d-flex mt-4">
+	                <div class="image mr-3 align-self-center">
+	                  <img src="static/menu/images/person_1.jpg" alt="">
+	                </div>
+	                <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>
+	              </div>
+	          </div>
+	        </div>
+	        <div class="col-lg align-self-sm-end">
+	          <div class="testimony overlay">
+	             <blockquote>
+	                <p>&ldquo;Спасибо, мне все понравилось, но я бы хотел сказать, что с принтером не идет инструкция&rdquo;</p>
+	              </blockquote>
+	              <div class="author d-flex mt-4">
+	                <div class="image mr-3 align-self-center">
+	                  <img src="static/menu/images/person_2.jpg" alt="">
+	                </div>
+	                <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>
+	              </div>
+	          </div>
+	        </div>
+	        <div class="col-lg align-self-sm-end ftco-animate">
+	          <div class="testimony">
+	             <blockquote>
+	                <p>&ldquo;Мне все понравилось &rdquo;</p>
+	              </blockquote>
+	              <div class="author d-flex mt-4">
+	                <div class="image mr-3 align-self-center">
+	                  <img src="static/menu/images/person_3.jpg" alt="">
+	                </div>
+	                <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>
+	              </div>
+	          </div>
+	        </div>
+	        <div class="col-lg align-self-sm-end">
+	          <div class="testimony overlay">
+	             <blockquote>
+	                <p>&ldquo;Спасибо, Все понравилось&rdquo;</p>
+	              </blockquote>
+	              <div class="author d-flex mt-4">
+	                <div class="image mr-3 align-self-center">
+	                  <img src="static/menu/images/person_2.jpg" alt="">
+	                </div>
+	                <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>
+	              </div>
+	          </div>
+	        </div>
+	        <div class="col-lg align-self-sm-end ftco-animate">
+	          <div class="testimony">
+	            <blockquote>
+	              <p>&ldquo;Спасибо &rdquo;</p>
+	            </blockquote>
+	            <div class="author d-flex mt-4">
+	              <div class="image mr-3 align-self-center">
+	                <img src="static/menu/images/person_3.jpg" alt="">
+	              </div>
+	              <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </section>
+		
+    <footer class="ftco-footer ftco-section img">
+    	<div class="overlay"></div>
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">О нас</h2>
+              <p>Мы продаем 3D принтеры по всей России</p>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-5 mb-md-5">
+             <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Мы предлогаем</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">Полная настройка</a></li>
+                <li><a href="#" class="py-2 d-block">Сам принтер</a></li>
+                <li><a href="#" class="py-2 d-block">Смазываем с завода</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Как с нами связаться?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Красная пл., 4</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+7 908 741 75 33</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">rusezmem@bk.ru</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="static/menu/js/jquery.min.js"></script>
+  <script src="static/menu/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="static/menu/js/popper.min.js"></script>
+  <script src="static/menu/js/bootstrap.min.js"></script>
+  <script src="static/menu/js/jquery.easing.1.3.js"></script>
+  <script src="static/menu/js/jquery.waypoints.min.js"></script>
+  <script src="static/menu/js/jquery.stellar.min.js"></script>
+  <script src="static/menu/js/owl.carousel.min.js"></script>
+  <script src="static/menu/js/jquery.magnific-popup.min.js"></script>
+  <script src="static/menu/js/aos.js"></script>
+  <script src="static/menu/js/jquery.animateNumber.min.js"></script>
+  <script src="static/menu/js/bootstrap-datepicker.js"></script>
+  <script src="static/menu/js/jquery.timepicker.min.js"></script>
+  <script src="static/menu/js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="static/menu/js/google-map.js"></script>
+  <script src="static/menu/js/main.js"></script>
+    
+  </body>
+</html>
